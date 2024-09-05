@@ -4,18 +4,7 @@ import React, { useState, useEffect } from 'react'
 import { Clock, Search } from 'lucide-react'
 import { courseData } from '@/lib/courseData'
 import { useSearchParams } from 'next/navigation'
-
-type Course = {
-    code: string;
-    title: string;
-    alias?: string;
-    place: string;
-    schedule: {
-      day: string;
-      startTime: string;
-      endTime: string;
-    }[];
-  }
+import type { Course } from '@/lib/types'
 
 const days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday']
 const timeSlots = [
