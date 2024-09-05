@@ -38,7 +38,7 @@ export const courseData : CourseData = {
             "title": "Software Design & Architecture",
             "instructor": "Nazim Madhavji",
             "schedule": [
-                { "day": "Friday", "startTime": "10:30", "endTime": "13:30", "place": "AHB 1B08" }
+                { "day": "Wednesday", "startTime": "19:00", "endTime": "22:00", "place": "FNB 3210" }
             ]
         },
         {
@@ -130,7 +130,7 @@ export const courseData : CourseData = {
             "title": "Intro to Machine Learning",
             "instructor": "Daniel Lizotte",
             "schedule": [
-                { "day": "Tuesday", "startTime": "15:30", "endTime": "17:30", "place": "NSC 7" }
+                { "day": "Thursday", "startTime": "15:30", "endTime": "17:30", "place": "UCC 56" }
             ]
         }
     ]
