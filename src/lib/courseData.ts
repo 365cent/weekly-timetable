@@ -118,7 +118,7 @@ export const courseData : CourseData = {
         {
             "code": "CS9877",
             "alias": "CS4463",
-            "title": "Computational Biology",
+            "title": "Research Topics in Genomics and Proteomics",
             "instructor": "Lucian Ilie",
             "schedule": [
                 { "day": "Wednesday", "startTime": "15:30", "endTime": "17:30", "place": "PAB 36" }
