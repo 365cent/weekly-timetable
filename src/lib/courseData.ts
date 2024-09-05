@@ -1,21 +1,4 @@
-type Schedule = {
-    day: string
-    startTime: string
-    endTime: string
-    place: string
-}
-
-type Course = {
-    code: string
-    alias: string
-    title: string
-    instructor: string
-    schedule: Schedule[]
-}
-
-type CourseData = {
-    courses: Course[]
-}
+import { Schedule, Course, CourseData } from './types';
 
 export const courseData : CourseData = {
     "courses": [
