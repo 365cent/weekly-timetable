@@ -1,9 +1,10 @@
+import { Suspense } from 'react'
 import Timetable from '@/components/timetable'
 
 export default function Home() {
   return (
-    <main className="bg-gray-100">
+    <Suspense fallback={<div>Loading...</div>}>
       <Timetable />
-    </main>
+    </Suspense>
   )
 }
