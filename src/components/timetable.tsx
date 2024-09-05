@@ -5,6 +5,18 @@ import { Clock, Search } from 'lucide-react'
 import { courseData } from '@/lib/courseData'
 import { useSearchParams } from 'next/navigation'
 
+type Course = {
+    code: string;
+    title: string;
+    alias?: string;
+    place: string;
+    schedule: {
+      day: string;
+      startTime: string;
+      endTime: string;
+    }[];
+  }
+
 const days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday']
 const timeSlots = [
   '09:30', '10:30', '11:30', '12:30', '13:30', '14:30', '15:30', '16:30'
@@ -20,7 +32,7 @@ const courseColors = [
 
 export default function WeeklyTimetable() {
   const [courseCodes, setCourseCodes] = useState('')
-  const [filteredCourses, setFilteredCourses] = useState([])
+  const [filteredCourses, setFilteredCourses] = useState<Course[]>([])
   const searchParams = useSearchParams()
 
   useEffect(() => {
