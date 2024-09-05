@@ -48,7 +48,7 @@ export default function WeeklyTimetable() {
     }
   }, [courseCodes])
 
-  const getClassesForTimeSlot = (day, time) => {
+  const getClassesForTimeSlot = (day: string, time: string) => {
     return filteredCourses.filter(course => 
       course.schedule.some(schedule => 
         schedule.day === day && 
@@ -65,7 +65,7 @@ export default function WeeklyTimetable() {
     }))
   }
 
-  const renderTimeSlot = (day, time, rowIndex) => {
+  const renderTimeSlot = (day: string, time: string, rowIndex: number) => {
     const classesForTimeSlot = getClassesForTimeSlot(day, time)
     const isStacked = classesForTimeSlot.length > 1
 
@@ -74,7 +74,7 @@ export default function WeeklyTimetable() {
         {classesForTimeSlot.map((classInfo, index) => {
           if (classInfo.startTime !== time) return null
           const startIndex = timeSlots.indexOf(classInfo.startTime)
-          const endIndex = timeSlots.indexOf(classInfo.endTime)
+          const endIndex = classInfo.endTime ? timeSlots.indexOf(classInfo.endTime) : -1;
           const rowSpan = endIndex - startIndex
           
           if (rowIndex > startIndex) return null
