@@ -8,7 +8,10 @@ import type { Course } from '@/lib/types'
 
 const days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday']
 const timeSlots = [
-    '09:30', '10:30', '11:30', '12:30', '13:30', '14:30', '15:30', '16:30'
+  '09:30', '10:30', '11:30',
+  '12:30', '13:00', '13:30',
+  '14:00', '14:30', '15:00',
+  '15:30', '16:00', '16:30'
 ]
 
 const courseColors = [
