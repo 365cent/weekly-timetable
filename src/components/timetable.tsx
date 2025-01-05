@@ -72,7 +72,9 @@ export default function WeeklyTimetable() {
         return (
             <td key={`${day}-${time}`} className="border p-1 w-32 h-16 align-top relative">
                 {classesForTimeSlot.map((classInfo, index) => {
-                    if (classInfo.startTime !== time) return null
+                    if (!(classInfo.startTime <= time && classInfo.endTime > time)) {
+                        return null
+                    }
                     const startIndex = timeSlots.indexOf(classInfo.startTime)
                     const endIndex = classInfo.endTime ? timeSlots.indexOf(classInfo.endTime) : -1;
                     const rowSpan = endIndex - startIndex
